@@ -12,6 +12,7 @@
 @interface ViewController () <UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 
 @property (strong, nonatomic) NSArray<UIImage *> *images;
 
@@ -95,6 +96,15 @@
     UIImageView *tappedImageView = sender;
     dvc.image = tappedImageView.image;
   }
+}
+
+#pragma mark - UIScrollViewDelegate
+
+
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+  NSUInteger pageIndex = scrollView.contentOffset.x / scrollView.frame.size.width;
+  self.pageControl.currentPage = pageIndex;
 }
 
 

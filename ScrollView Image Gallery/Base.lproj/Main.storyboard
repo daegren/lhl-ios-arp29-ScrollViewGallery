@@ -24,18 +24,26 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="5Hi-w4-hjt"/>
                                 </connections>
                             </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="lqY-GS-4U5">
+                                <rect key="frame" x="168" y="610" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V8k-Tj-gfl" secondAttribute="trailing" id="6NT-C5-dud"/>
                             <constraint firstItem="V8k-Tj-gfl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LZD-YG-hn8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="V8k-Tj-gfl" secondAttribute="bottom" id="Y7D-0m-YwI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lqY-GS-4U5" secondAttribute="bottom" constant="20" id="meq-Ab-giH"/>
+                            <constraint firstItem="lqY-GS-4U5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ohs-MF-Mnq"/>
                             <constraint firstItem="V8k-Tj-gfl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wMO-GM-Jwj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="yW6-xO-FNC"/>
                     <connections>
+                        <outlet property="pageControl" destination="lqY-GS-4U5" id="jDN-pv-Hut"/>
                         <outlet property="scrollView" destination="V8k-Tj-gfl" id="Dg0-XB-COZ"/>
                         <segue destination="fGr-Is-oQT" kind="show" identifier="showDetail" id="Dtb-Vx-Nfr"/>
                     </connections>
