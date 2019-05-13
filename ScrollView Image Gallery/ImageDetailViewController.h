@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ImageDetailViewController : UIViewController
 
+@property (weak, nonatomic) UIImage *image;
+
 @end
 
 NS_ASSUME_NONNULL_END

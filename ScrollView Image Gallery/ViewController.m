@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ImageDetailViewController.h"
 
 @interface ViewController () <UIScrollViewDelegate>
 
@@ -28,6 +29,12 @@
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
     imageView.image = image;
     imageView.contentMode = UIViewContentModeScaleAspectFit;
+
+    // Tap recog
+    imageView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
+    [imageView addGestureRecognizer:tap];
+
 
     [self.scrollView addSubview:imageView];
 
@@ -74,6 +81,20 @@
   }
 
   return _images;
+}
+
+- (void)tap:(UITapGestureRecognizer *)sender {
+  [self performSegueWithIdentifier:@"showDetail" sender:sender.view];
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  if ([segue.identifier isEqualToString:@"showDetail"]) {
+    ImageDetailViewController *dvc = segue.destinationViewController;
+    UIImageView *tappedImageView = sender;
+    dvc.image = tappedImageView.image;
+  }
 }
 
 
