@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "Lighthouse-in-Field.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Lighthouse-in-Field.jpg",
       "scale" : "2x"
     },
     {

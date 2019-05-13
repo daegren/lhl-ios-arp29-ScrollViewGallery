@@ -14,6 +14,7 @@
 		55A6BF5D2289EB3900645C72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55A6BF5B2289EB3900645C72 /* LaunchScreen.storyboard */; };
 		55A6BF602289EB3900645C72 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A6BF5F2289EB3900645C72 /* main.m */; };
 		55A6BF682289F69000645C72 /* ImageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A6BF672289F69000645C72 /* ImageDetailViewController.m */; };
+		55A6BF6B228A07A600645C72 /* TappableImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A6BF6A228A07A600645C72 /* TappableImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		55A6BF5F2289EB3900645C72 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		55A6BF662289F69000645C72 /* ImageDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageDetailViewController.h; sourceTree = "<group>"; };
 		55A6BF672289F69000645C72 /* ImageDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageDetailViewController.m; sourceTree = "<group>"; };
+		55A6BF69228A07A600645C72 /* TappableImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TappableImageView.h; sourceTree = "<group>"; };
+		55A6BF6A228A07A600645C72 /* TappableImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TappableImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 				55A6BF5F2289EB3900645C72 /* main.m */,
 				55A6BF662289F69000645C72 /* ImageDetailViewController.h */,
 				55A6BF672289F69000645C72 /* ImageDetailViewController.m */,
+				55A6BF69228A07A600645C72 /* TappableImageView.h */,
+				55A6BF6A228A07A600645C72 /* TappableImageView.m */,
 			);
 			path = "ScrollView Image Gallery";
 			sourceTree = "<group>";
@@ -147,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55A6BF552289EB3700645C72 /* ViewController.m in Sources */,
+				55A6BF6B228A07A600645C72 /* TappableImageView.m in Sources */,
 				55A6BF602289EB3900645C72 /* main.m in Sources */,
 				55A6BF522289EB3700645C72 /* AppDelegate.m in Sources */,
 				55A6BF682289F69000645C72 /* ImageDetailViewController.m in Sources */,

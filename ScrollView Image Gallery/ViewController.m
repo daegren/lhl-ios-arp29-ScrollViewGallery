@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ImageDetailViewController.h"
+#import "TappableImageView.h"
 
 @interface ViewController () <UIScrollViewDelegate>
 
@@ -24,17 +25,12 @@
   [super viewDidLoad];
   // Do any additional setup after loading the view, typically from a nib.
 
-  UIImageView *prevImageView;
+  TappableImageView *prevImageView;
 
   for (UIImage *image in self.images) {
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
+    TappableImageView *imageView = [[TappableImageView alloc] initWithFrame:CGRectZero];
     imageView.image = image;
-    imageView.contentMode = UIViewContentModeScaleAspectFit;
-
-    // Tap recog
-    imageView.userInteractionEnabled = YES;
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
-    [imageView addGestureRecognizer:tap];
+    [imageView addTarget:self action:@selector(tap:) forControlEvents:UIControlEventTouchUpInside];
 
 
     [self.scrollView addSubview:imageView];
@@ -86,8 +82,8 @@
 
 #pragma mark - Actions
 
-- (void)tap:(UITapGestureRecognizer *)sender {
-  [self performSegueWithIdentifier:@"showDetail" sender:sender.view];
+- (void)tap:(TappableImageView *)sender {
+  [self performSegueWithIdentifier:@"showDetail" sender:sender.image];
 }
 
 - (IBAction)pageChanged:(id)sender {
@@ -101,8 +97,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
   if ([segue.identifier isEqualToString:@"showDetail"]) {
     ImageDetailViewController *dvc = segue.destinationViewController;
-    UIImageView *tappedImageView = sender;
-    dvc.image = tappedImageView.image;
+    UIImage *tappedImage = sender;
+    dvc.image = tappedImage;
   }
 }
 
