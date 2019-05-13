@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fGr-Is-oQT">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -42,5 +42,54 @@
             </objects>
             <point key="canvasLocation" x="159" y="115"/>
         </scene>
+        <!--Image Detail View Controller-->
+        <scene sceneID="4j9-z3-slL">
+            <objects>
+                <viewController id="fGr-Is-oQT" customClass="ImageDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9aF-Xf-Z43">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.5" maximumZoomScale="3" translatesAutoresizingMaskIntoConstraints="NO" id="XBa-sk-ESm">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lighthouse-in-Field" translatesAutoresizingMaskIntoConstraints="NO" id="XEX-5U-OjN">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="XEX-5U-OjN" secondAttribute="bottom" id="3w6-LR-6Au"/>
+                                    <constraint firstItem="XEX-5U-OjN" firstAttribute="top" secondItem="XBa-sk-ESm" secondAttribute="top" id="a5a-mS-T6m"/>
+                                    <constraint firstAttribute="trailing" secondItem="XEX-5U-OjN" secondAttribute="trailing" id="je1-NE-QOd"/>
+                                    <constraint firstItem="XEX-5U-OjN" firstAttribute="centerY" secondItem="XBa-sk-ESm" secondAttribute="centerY" id="kEz-ad-825"/>
+                                    <constraint firstItem="XEX-5U-OjN" firstAttribute="centerX" secondItem="XBa-sk-ESm" secondAttribute="centerX" id="lSA-AT-iZD"/>
+                                    <constraint firstItem="XEX-5U-OjN" firstAttribute="leading" secondItem="XBa-sk-ESm" secondAttribute="leading" id="tU8-C6-jnB"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="fGr-Is-oQT" id="Cuc-iy-Syo"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XBa-sk-ESm" firstAttribute="top" secondItem="Vag-J4-stp" secondAttribute="top" id="FYJ-oo-jNh"/>
+                            <constraint firstItem="Vag-J4-stp" firstAttribute="bottom" secondItem="XBa-sk-ESm" secondAttribute="bottom" id="FdC-M7-u3V"/>
+                            <constraint firstItem="Vag-J4-stp" firstAttribute="trailing" secondItem="XBa-sk-ESm" secondAttribute="trailing" id="O3n-L8-6uf"/>
+                            <constraint firstItem="XBa-sk-ESm" firstAttribute="leading" secondItem="Vag-J4-stp" secondAttribute="leading" id="pKG-eb-3sW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vag-J4-stp"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="XEX-5U-OjN" id="Job-aT-KRt"/>
+                        <outlet property="scrollView" destination="XBa-sk-ESm" id="QhN-N6-7Br"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dIC-kB-TYC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1444" y="115"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Lighthouse-in-Field" width="960" height="540"/>
+    </resources>
 </document>
