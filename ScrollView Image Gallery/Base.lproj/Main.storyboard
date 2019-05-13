@@ -18,25 +18,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="lqY-GS-4U5">
+                                <rect key="frame" x="8" y="610" width="359" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="e1m-4K-GcI"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="pageChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="GDh-Ke-1zR"/>
+                                </connections>
+                            </pageControl>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8k-Tj-gfl">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="526"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="5Hi-w4-hjt"/>
                                 </connections>
                             </scrollView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="lqY-GS-4U5">
-                                <rect key="frame" x="168" y="610" width="39" height="37"/>
-                                <color key="pageIndicatorTintColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="lqY-GS-4U5" firstAttribute="top" secondItem="V8k-Tj-gfl" secondAttribute="bottom" constant="20" id="0ns-eL-mmN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V8k-Tj-gfl" secondAttribute="trailing" id="6NT-C5-dud"/>
-                            <constraint firstItem="V8k-Tj-gfl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LZD-YG-hn8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="V8k-Tj-gfl" secondAttribute="bottom" id="Y7D-0m-YwI"/>
+                            <constraint firstItem="V8k-Tj-gfl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="icz-QB-fqf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lqY-GS-4U5" secondAttribute="trailing" constant="8" id="kwA-RW-3yK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lqY-GS-4U5" secondAttribute="bottom" constant="20" id="meq-Ab-giH"/>
                             <constraint firstItem="lqY-GS-4U5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ohs-MF-Mnq"/>
+                            <constraint firstItem="lqY-GS-4U5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="vum-Wf-0Xw"/>
                             <constraint firstItem="V8k-Tj-gfl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wMO-GM-Jwj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

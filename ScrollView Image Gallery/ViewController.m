@@ -84,8 +84,16 @@
   return _images;
 }
 
+#pragma mark - Actions
+
 - (void)tap:(UITapGestureRecognizer *)sender {
   [self performSegueWithIdentifier:@"showDetail" sender:sender.view];
+}
+
+- (IBAction)pageChanged:(id)sender {
+  CGFloat pageWidth = self.scrollView.contentSize.width / self.pageControl.numberOfPages;
+  [self.scrollView scrollRectToVisible:CGRectMake(pageWidth * self.pageControl.currentPage, 0, pageWidth, 10)
+                              animated:YES];
 }
 
 #pragma mark - Navigation
